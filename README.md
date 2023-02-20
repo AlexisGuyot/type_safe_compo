@@ -12,7 +12,7 @@ This github repository contains an open source implementation in Scala of our fr
 
 We illustrate the usefulness of our proposal with a use case.
 
-### Proposed context: 
+### Proposed context
 
 Data (tweets) have been collected from Twitter and ingested as-it-is in a data lake as JSON files.
 
