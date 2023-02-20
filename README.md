@@ -94,7 +94,7 @@ Tree structure:
     - **Tests.scala**: *further tests for the different components implemented in this project.*
 - **types/**:
     - **Models.scala**: *types for the different data models (JSON, Relation, etc.).*
-    - **ModelTransform.scala**: *types that can be implicitly built if data in a specific model can be transformed into another specific model.*
+    - **ModelTransform.scala**: *types that can be implicitly built if data in a specific model can be transformed into another specific model (not used yet).*
     - **ValidateSchema.scala**: *types that can be implicitly built if a schema (as a HList) conforms to a given model.*
 - **Main.scala**: *source code for the example presented in Use Case.*
 
