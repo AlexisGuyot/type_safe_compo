@@ -18,16 +18,13 @@ object Main extends App {
   /* == Use Case ============================= */
 
   /* 
-  Context: data (tweets) were collected on Twitter and ingested in a data lake as JSON files.
+  Context: data (tweets) have been collected from Twitter and ingested as-it-is in a data lake as JSON files.
 
   Tweets in the JSON files have the following structure:
   {
     "user": "userA",
     "tweet": "This is my tweet ! #hashtag1 #hashtag2",
     "hashtags": ["hashtag1", "hashtag2"]
-  },
-  {
-    ...
   },
   ...
 
