@@ -2,9 +2,7 @@ package types
 
 import shapeless._
 import shapeless.labelled.FieldType
-
-// Checks if a given schema (as HList) conforms to a model: authorized types for values.
-sealed trait ValidateSchemaModel[Schema]
+import scala.annotation.implicitNotFound
 
 // Checks if a given model type is conform
 sealed trait ValidateSchema[+M <: Model[_]]
@@ -14,6 +12,9 @@ object ValidateSchema {
     implicit def validate_json[S <: HList : ValidateSchemaJSON]: ValidateSchema[JSON[S]] = new ValidateSchema[JSON[S]] {}
     implicit def validate_relation[S <: HList : ValidateSchemaRelation]: ValidateSchema[Relation[S]] = new ValidateSchema[Relation[S]] {}
 }
+
+// Checks if a given schema (as HList) conforms to a model: authorized types for values.
+sealed trait ValidateSchemaModel[Schema]
 
 object Null
 
