@@ -121,4 +121,5 @@ object Main extends App {
 
   // Individual testing of the different components.
   tests.further_tests()
+  tgd.tests_tgds()
 }

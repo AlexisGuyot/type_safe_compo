@@ -21,3 +21,6 @@ libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.14"
 
 // Scala Reflect
 libraryDependencies += "org.scala-lang" % "scala-reflect" % scalaVersion.value
+
+// Scalaz
+libraryDependencies += "org.scalaz" %% "scalaz-core" % "7.3.7"
