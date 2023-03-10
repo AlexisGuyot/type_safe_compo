@@ -9,9 +9,9 @@ object safe_composition {
 
         // A composition is safe if:
         // - the schema returned by the first function and taken as input by the second is conforms to its model;
-        def safeAndThen[M4 <: Model[_]](g: M2 => M4)(
+        def safeAndThen[M3 <: Model[_]](g: M2 => M3)(
             implicit 
             check: ValidateSchema[M2]
-        ): M1 => M4 = { x => g(f(x)) }
+        ): M1 => M3 = { x => g(f(x)) }
     }
 }

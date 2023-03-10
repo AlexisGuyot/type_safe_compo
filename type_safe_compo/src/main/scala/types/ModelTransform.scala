@@ -13,8 +13,8 @@ object ModelTransform {
     type Aux[ModelIn <: Model[_], ModelOut <: Model[_], Out0] = ModelTransform[ModelIn, ModelOut] { type Out = Out0 }
 
     // Simple transformations (schema of model1 conforms model2)
-    implicit def toJSON[Schema <: HList : ValidateSchemaJSON, M1 <: Model[Schema]]: Aux[M1, JSON[Schema], JSON[Schema]] = new ModelTransform[M1, JSON[Schema]] { type Out = JSON[Schema];  def apply(d: M1) = new JSON[Schema] }
-    implicit def toRelation[Schema <: HList : ValidateSchemaRelation, M1 <: Model[Schema]]: Aux[M1, Relation[Schema], Relation[Schema]] = new ModelTransform[M1, Relation[Schema]] { type Out = Relation[Schema]; def apply(d: M1) = new Relation[Schema] }
+    implicit def toJSON[Schema <: HList : SchemaJSON, M1 <: Model[Schema]]: Aux[M1, JSON[Schema], JSON[Schema]] = new ModelTransform[M1, JSON[Schema]] { type Out = JSON[Schema];  def apply(d: M1) = new JSON[Schema] }
+    implicit def toRelation[Schema <: HList : SchemaRelation, M1 <: Model[Schema]]: Aux[M1, Relation[Schema], Relation[Schema]] = new ModelTransform[M1, Relation[Schema]] { type Out = Relation[Schema]; def apply(d: M1) = new Relation[Schema] }
 
     // More complex transformations
 
